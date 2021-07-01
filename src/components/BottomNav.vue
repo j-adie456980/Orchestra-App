@@ -2,7 +2,7 @@
 <div className="bottom-nav">
     <h1>Enter Name : </h1>
     <input type="text" maxlength="30">
-    <div className="score-label">Score : </div>
+    <div className="score-label" style="font-family: Sarala;">Score : </div>
     <div className="score-value"><canvas id="canvas"></canvas></div>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
       var c = document.getElementById("canvas");
       var ctx = c.getContext("2d");  
       ctx.clearRect(0, 0, 400, 200);  
-      ctx.font = "bold 500% Sarala";
+      ctx.font = "bold 400% Verdana, sans-serif";
       ctx.fillStyle = "white";
       ctx.textAlign = "center";
       ctx.fillText(`${score}`, c.width/2, c.height/2);
@@ -78,7 +78,6 @@ export default {
 .score-label {
   color: white;
   font-size: 250%;
-  font-family: 'Sarala';
   font-weight: bold;
   height: 100%;
   width: 10%;
@@ -96,13 +95,13 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1%;
+  margin-left: 2%;
   margin-top: 1%;
 }
 
 canvas {
-  width: 150%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
 }
 
 @keyframes pulse {
